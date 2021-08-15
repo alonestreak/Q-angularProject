@@ -2,8 +2,8 @@
     <h2>Employee Information Form</h2>
     <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label>Employee Name</label>
-            <input type="text" class="form-control" #employeeName="ngModel" 
+            <label>Employee Name </label>
+            <input type="text" class="form-control"  placeholder="Ravi" #employeeName="ngModel" 
             [class.is-invalid]="employeeName.invalid && employeeName.touched" required name ="employeeName" minlength="3"
             [(ngModel)]="employeeModel.name">
             <small class="text-danger" *ngIf="employeeName.errors?.minlength">
@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <label>Employee Address</label>
-            <input type="text" class="form-control" #employeeAddress="ngModel"
+            <input type="text" class="form-control" #employeeAddress="ngModel" placeholder="12 state road Mumbai-12"
             [class.is-invalid]="employeeAddress.invalid && employeeAddress.touched" required  name ="employeeAddress" 
             [(ngModel)]="employeeModel.address">
             <small class="text-danger" [class.d-none]="employeeAddress.untouched || employeeAddress.valid">Address is required</small>
@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label>Employee Email</label>
-            <input type="email" class="form-control" email #employeeEmail="ngModel"
+            <input type="email" class="form-control" email #employeeEmail="ngModel" placeholder="your@mail.com"
              required [class.is-invalid]="employeeEmail.invalid && employeeEmail.touched"
              name ="employeeEmail" [(ngModel)]="employeeModel.email">
              <div *ngIf="employeeEmail.errors && (employeeEmail.invalid || employeeEmail.touched)">

@@ -12,6 +12,7 @@ import { ApiComponentComponent } from './api-component/api-component.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ApiResponseService } from './api-response.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { ApiResponseService } from './api-response.service';
     FormsModule,
     MatTabsModule
   ],
-  providers: [ApiResponseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,27 +13,20 @@ export class ApiComponentComponent implements OnInit {
   allData: apiData[]=[];
   displayedColumns : string[]=['userId','id','title','body'];
   dataSource = new MatTableDataSource<apiData>(this.allData);
-
-
+  public errorMsg: any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-
   constructor(private service: ApiResponseService) { }
 
   ngOnInit(){
     this.getAllData();
   }
 
-
-
   public getAllData(){
-    let resp= this.service.fakeApiResponse();
-    //console.log(resp);
-    resp.subscribe(row=>this.dataSource.data=row as apiData[]);
+    this.service.fakeApiResponse().subscribe(row=>this.dataSource.data=row as apiData[], error=>this.errorMsg=error);
   }
 
 }

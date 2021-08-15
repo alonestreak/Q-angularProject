@@ -21,10 +21,10 @@
                 <button (click)="user.isOpen = !user.isOpen" class="more">{{ user.isOpen ? 'Show less': 'Show More...' }}</button>
             </td>
         </ng-container>
-        
     <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    {{ errorMsg}}
     <mat-paginator [pageSizeOptions]="[5,7,10]"
                  showFirstLastButtons 
                  aria-label="Select page of periodic elements">
