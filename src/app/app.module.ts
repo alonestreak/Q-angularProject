@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ApiComponentComponent } from './api-component/api-component.component';
 import { FormComponentComponent } from './form-component/form-component.component';
+import { ApiResponseService } from './api-response.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FormComponentComponent } from './form-component/form-component.componen
     FormsModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [ApiResponseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
