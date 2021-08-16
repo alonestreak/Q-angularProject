@@ -1,13 +1,21 @@
-#submit{
-    width: 100vh;
+button {
+    width: 50%;
     margin-top: 20px;
     margin-left: 25%;
-}
-h2{
+    margin-right: 25%;
+    
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+  h2 {
     color: blue;
     text-align: center;
     margin-top: 15px;
-}
-.form-group{
+  }
+  .form-group {
     padding: 10px;
-}
+  }
+  

@@ -17,8 +17,7 @@
 
         <ng-container matColumnDef="body">
             <th mat-header-cell *matHeaderCellDef> BODY </th>
-            <td mat-cell *matCellDef="let user"> {{ (user.isOpen) ? user.body : user.body | slice:0:100}}
-                <button (click)="user.isOpen = !user.isOpen" class="more">{{ user.isOpen ? 'Show less': 'Show More...' }}</button>
+            <td mat-cell *matCellDef="let user"> {{ user.body }}
             </td>
         </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
